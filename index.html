@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pradyumna Tripathi</title>
+  <title>Pradyumna Tripathi | MCA </title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="./favicon.ico" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  
+  <div class="header">
+    <div id="social_icon_container">
+      <div class="menu">
+        <img src="./images/menubutton.png" onclick="toggleClass()"/>&nbsp;&nbsp;
+        <a href="mailto:pradyumnatripathi99@gmail.com"><p id="gmail">Email</p></a>
+      </div>
+      <div class="social_content">
+        <div class="social_icons">
+          <span><img src="./images/facebook.png"></span>
+          <span><img src="./images/twitter.png"></span>
+          <span><img src="./images/linkedin.png"></span>
+          <span><img src="./images/github.png"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="maincontent"></div>
+  <div class="footer"></div>
 </body>
 </html>
+<script>
+  toggleClass = () => {
+    document.querySelector('.social_content').classList.toggle  ('hide');
+  }
+</script>

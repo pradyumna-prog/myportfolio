@@ -1,0 +1,81 @@
+body{
+  font-family: Arial;
+}
+body *{
+  border-radius: 5px;
+}
+.header{
+  float: right;
+  margin-right: 15px;
+  padding: 2px;
+}
+.menu{
+  user-select: none;
+  margin-left: -100px;
+  cursor: pointer;
+}
+.menu img{
+  position: relative;
+  top: 4px;
+}
+.menu #gmail{
+  outline: none;
+  border: 1px solid #4285f4;
+  background-color: #4285f4;
+  color: #fff;
+  line-height: 26px;
+  border-radius: 2px;
+  padding: 0 12px;
+  display: inline-block;
+  margin-top: 0px;
+  text-decoration: none;
+}
+.hide{
+  display: none;
+}
+.social_content{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  margin-left: -210px;
+  margin-top: -7px;
+  color: black;
+  border: 1.5px solid #fff;
+  box-shadow: 
+    3px 3px 3px 2px #b1b1b1,
+    -3px 0px 3px 2px #b1b1b1;
+  padding: 2px;
+  user-select: none;
+}
+.social_content:before{
+  position: absolute;
+  content: ''; 
+  width: 17px; height: 17px;
+  transform: rotate(45deg);   
+  top: -4%;
+  margin-left: 106px;
+  background-color: #fff;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  box-shadow: 
+    -3px -3px 3px 0px #b1b1b1;
+}
+.social_icons{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 1em;
+}
+.social_icons span{
+  width: 60px; height: 60px;
+  display: flex;
+  justify-content: center;
+}
+.social_icons img{
+  width: 40px; height: 40px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.social_icons span:hover{
+  background-color: rgb(240, 234, 234);
+}
