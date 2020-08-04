@@ -4,32 +4,44 @@
   <title>Pradyumna Tripathi | MCA </title>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="shortcut icon" href="./favicon.ico" />
+  <link rel="shortcut icon" href="./favicon icon.ico" />
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="./jquery-3.3.1.min.js" ></script>
+  
   <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
 </head>
 <body>
   <div class="header">
     <div id="social_icon_container">
       <div class="menu">
-        <img src="./images/menubutton.png" onclick="toggleClass()"/>&nbsp;&nbsp;
-        <a href="mailto:pradyumnatripathi99@gmail.com"><p id="gmail">Email</p></a>
+        <span><i class="fas fa-th" aria-hidden="true" id="menubtn"></i></span>
+        <p id="emailbtn"><a href="mailto:pradyumnatripathi99@gmail.com"></a>Email</a></p>
       </div>
       <div class="social_content">
         <div class="social_icons">
-          <span><img src="./images/facebook.png"></span>
-          <span><img src="./images/twitter.png"></span>
-          <span><img src="./images/linkedin.png"></span>
-          <span><img src="./images/github.png"></span>
+          <span><i class="fa fa-facebook-square" aria-hidden="true" id="fb"></i></span>
+          <span><i class="fa fa-twitter-square" aria-hidden="true" id="twt"></i></span>
+          <span><i class="fa fa-linkedin-square" aria-hidden="true" id="lnkd"></i></span>
+          <span><i class="fa fa-github-square" aria-hidden="true" id="gh"></i></span>
         </div>
       </div>
     </div>
   </div>
-  <div class="maincontent"></div>
+  <div class="main_content">
+    <div class="banner_container">
+      <img src="images/banner.png" id="banner"/>
+    </div>
+    <div>
+      <input type="text">
+    </div>  
+  </div>
   <div class="footer"></div>
 </body>
 </html>
 <script>
-  toggleClass = () => {
-    document.querySelector('.social_content').classList.toggle  ('hide');
-  }
+  $('.menu i').click( () => {
+    $('.social_content').toggle();
+  });
 </script>
