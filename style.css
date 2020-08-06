@@ -1,73 +1,95 @@
-body{
-  font-family: Arial;
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
-body *{
-  border-radius: 5px;
+section{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-.header{
-  float: right;
-  padding-right: 15px;
-  padding: 10px;
-  margin-right: 15px;
+section header{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 30px;
 }
-.menu{
-  user-select: none;
-  margin-left: -100px;
+section header ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section header ul li{
+  list-style: none;
+  margin-left: 20px;
+}
+section header ul li span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
   cursor: pointer;
-  line-height: 35px;
+  font-size: 20px;  
 }
-.menu #menubtn{
-  color: gray;
-  font-size: 20px;
-  margin-right: 15px;
+section header ul li span:hover{
+  background-color: rgb(238, 238, 238);
 }
-.menu #menubtn:hover{
-  color: black;
+#menubtn{opacity: 0.5;}
+section header ul li span:hover #menubtn{
+  opacity: 1;
 }
-.menu #emailbtn{
-  outline: none;
-  font-size: 16px;
-  border: 1px solid #4285f4;
-  background-color: #4285f4;
-  color: #fff;
-  border-radius: 2px;
-  padding: 0 12px;
-  display: inline-block;
-  margin-top: 0px;
+section header ul li a{
+  color: #111;
   text-decoration: none;
+  font-size: 13px;
 }
-.social_content{
+section header ul li button{
+  background-color: #4285f4;
+  border: none;
+  outline: none;
+  padding: 8px 14px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.icons_wrapper{
   position: absolute;
   width: 200px;
   height: 200px;
   margin-left: -210px;
-  margin-top: -7px;
+  margin-top: 40px;
   color: black;
-  border: 1.5px solid #fff;
+  border: 1px solid #fff;
   box-shadow: 
     3px 3px 3px 2px #b1b1b1,
     -3px 0px 3px 2px #b1b1b1;
-  padding-left: 20px;
-  padding-top: 20px;
   user-select: none;
+  border-radius: 7px;
+  padding: 20px 0;
   display: none;
 }
 .social_icons{
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, auto);
+  display: flex;
+  justify-content: space-evenly ;
   row-gap: 1em;
 }
 .social_icons span{
-  width: 60px; height: 60px;
+  width: 80px; height: 80px;
   display: flex;
   justify-content: center;
 }
 .social_icons i{
   cursor: pointer;
-  font-size: 40px;
+  font-size: 45px;
   text-align: center;
-  line-height: 60px;
+  line-height: 80px;
 }
 #fb{color: rgb(66, 103, 178);}
 #twt{color: rgb(29, 161, 242);}
@@ -77,11 +99,89 @@ body *{
 .social_icons span:hover{
   background-color: rgb(240, 234, 234);
 }
-.banner_container{
+
+/*header ends main start*/
+section .main{
+  width: 580px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding-top: 150px;
 }
-#banner{
-  width: 372px;
+section .main .searchbox{
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+section .main .searchbox .search{
+  width: 100%;
+  padding: 13px;
+  padding-left: 45px;
+  padding-right: 60px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+}
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+section .main .searchbox .search::after{
+  content: '|';
+  animation: flickerAnimation 1s infinite;
+}
+section .main .buttons{
+  margin-top: 20px;
+}
+section .main .buttons button{
+  margin: 0 5px;
+  padding: 12px 20px;
+  color: #555;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  outline: none;
+}
+section .main .buttons button:hover{
+  border: 1px solid #ccc;
+}
+/*main ends footer starts*/
+section .footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+section .footer .row{
+ padding: 15px 25px;
+ border-top: 1px solid rgba(0,0,0,0.05);
+ color: #555;
+}
+section .footer .row.row2{
+  display: flex;
+  justify-content: space-between;
+}
+section .footer .row.row2 ul{
+  display: flex;
+}
+section .footer .row.row2 ul li{
+  list-style: none;
+}
+section .footer .row.row2 ul li a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #555;
+  margin-right: 25px;
+}
+section .footer .row.row2 ul:nth-child(2) li a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #555;
+  margin-right: 25px;
+  margin-left: 25px;
 }
