@@ -130,6 +130,7 @@ section .main .searchbox .search{
 }
 section .main .searchbox .search::after{
   content: '|';
+  font-size: 20px;
   animation: flickerAnimation 1s infinite;
 }
 section .main .buttons{
