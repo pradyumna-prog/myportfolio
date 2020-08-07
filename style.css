@@ -11,6 +11,11 @@ section{
   align-items: center;
   min-height: 100vh;
 }
+@media(max-width:600px){
+  section{
+    min-height: 90vh;
+  }
+}
 section header{
   position: absolute;
   top: 0;
