@@ -1,9 +1,9 @@
 $('#menubtn').click( () => {
-  $('.icons_wrapper').fadeToggle();
+  $('.icons_wrapper').fadeToggle("fast");
 });
 $(document).mouseup(function (e) { 
   if (($(e.target).closest("header ul").length === 0) && ($(e.target).closest(".icons_wrapper").length === 0)) { 
-      $(".icons_wrapper").fadeOut(); 
+      $(".icons_wrapper").fadeOut("fast"); 
   } 
 });
 const arr = [
