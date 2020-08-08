@@ -78,6 +78,7 @@ section header ul li button{
   border-radius: 7px;
   padding: 20px 0;
   display: none;
+  z-index: 10000;
 }
 .social_icons{
   display: flex;
