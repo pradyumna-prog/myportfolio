@@ -21,7 +21,7 @@ setString = () => {
       let el = document.querySelector('.search');
       setTimeout( char => {
           el.innerHTML = char;
-      }, 200 * index, char);
+      }, 150 * index, char);
       index++;
     }
     if(x+1 == arr.length){break;}
@@ -30,7 +30,7 @@ setString = () => {
       let el = document.querySelector('.search');
       setTimeout( char => {
           el.innerHTML = char;
-      }, 200 * index, char);
+      }, 150 * index, char);
       index++;
     }
   }
